@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Домашнее задание E2.9 Список писем</title>
+</head>
+<body>
+    <div class="container">
+    <h3>{{title}}</h3>
+	<table class="table table-bordered">
+        <tr>
+            <th>Тема</th>
+            <th>Текст письма</th>
+            <th>Адресс получателя</th>
+            <th>Отложеное время</th>
+            <th>Отправлено</th>
+        </tr>
+        {% for mail in mails %}
+            <tr>
+                <td>{{ mail.subject }}</td>
+                <td>{{ mail.message }}</td>
+                <td>{{ mail.to_email }}</td>
+                <td>{{ mail.delay }}</td>
+                {% if mail.status %}
+                    <td><input type="checkbox" checked disabled></td>
+                {% else %}
+                    <td><input type="checkbox" disabled></td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Написать письмо</a>
+</div>
+</body>
+</html>

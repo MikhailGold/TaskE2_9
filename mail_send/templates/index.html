@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Домашнее задание E2.9 Рассылка</title>
+</head>
+<body>
+    <div class="container">
+    <h5>Форма отправки письма</h5>
+	<form method="post">  
+        {% csrf_token %}  
+        {{ form.as_p }}  
+        <button type="submit" class="btn btn-sm btn-outline-primary">Отправить</button>
+    </form> 
+    <a href="/mails_list">Список писем</a> 
+</div>
+</body>
+</html>
