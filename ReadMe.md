@@ -6,5 +6,4 @@
 Активировать среду: cd venv\Scripts activate.bat;
 Установить необходимые зависимости: pip install -r requirements.txt;
 Запустить сервер: python manage.py runserver:
-
 Для входа в админ панель - admin:Ghbdtn
